@@ -49,38 +49,52 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="px-6 py-20 text-center max-w-7xl mx-auto">
-        <div className="animate-fade-in">
-          <Badge
-            variant="secondary"
-            className="mb-6 bg-pink-100 text-pink-800 border-pink-200"
-          >
-            🕵️ Профессиональные тайные покупатели
-          </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
-            Проверим ваш <br />
-            бизнес изнутри
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Получите объективную оценку качества обслуживания, работы персонала
-            и конкурентных преимуществ через профессиональных тайных покупателей
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 text-lg"
+      <section id="home" className="px-6 py-20 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="animate-fade-in">
+            <Badge
+              variant="secondary"
+              className="mb-6 bg-pink-100 text-pink-800 border-pink-200"
             >
-              <Icon name="Phone" size={20} className="mr-2" />
-              Заказать проверку
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-8 py-4 text-lg"
-            >
-              <Icon name="Users" size={20} className="mr-2" />
-              Стать покупателем
-            </Button>
+              🕵️ Профессиональные тайные покупатели
+            </Badge>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+              Проверим ваш <br />
+              бизнес изнутри
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Получите объективную оценку качества обслуживания, работы
+              персонала и конкурентных преимуществ через профессиональных тайных
+              покупателей
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 text-lg"
+              >
+                <Icon name="Phone" size={20} className="mr-2" />
+                Заказать проверку
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-8 py-4 text-lg"
+              >
+                <Icon name="Users" size={20} className="mr-2" />
+                Стать покупателем
+              </Button>
+            </div>
+          </div>
+          <div className="animate-scale-in">
+            <div className="relative">
+              <img
+                src="/img/59689069-d473-4101-85ba-05d850e3a8d1.jpg"
+                alt="Профессиональные тайные покупатели"
+                className="w-full h-auto rounded-3xl shadow-2xl"
+              />
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-r from-pink-500 to-indigo-500 rounded-full opacity-15 blur-2xl"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -98,11 +112,15 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover-scale border-indigo-100 hover:border-indigo-300 transition-all duration-300">
+            <Card className="hover-scale border-indigo-100 hover:border-indigo-300 transition-all duration-300 overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center">
+                <img
+                  src="/img/209b16e1-e39c-405e-908d-00fa985a335a.jpg"
+                  alt="Проверка качества обслуживания"
+                  className="w-32 h-32 object-cover rounded-lg shadow-lg"
+                />
+              </div>
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Star" size={32} className="text-indigo-600" />
-                </div>
                 <CardTitle className="text-xl font-bold text-gray-900">
                   Проверка качества обслуживания
                 </CardTitle>
@@ -115,11 +133,15 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover-scale border-pink-100 hover:border-pink-300 transition-all duration-300">
+            <Card className="hover-scale border-pink-100 hover:border-pink-300 transition-all duration-300 overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-pink-50 to-pink-100 flex items-center justify-center">
+                <img
+                  src="/img/d033f10c-59aa-491d-86ef-3ace99f1f28d.jpg"
+                  alt="Мониторинг персонала"
+                  className="w-32 h-32 object-cover rounded-lg shadow-lg"
+                />
+              </div>
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Users" size={32} className="text-pink-600" />
-                </div>
                 <CardTitle className="text-xl font-bold text-gray-900">
                   Мониторинг персонала
                 </CardTitle>
@@ -132,11 +154,15 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover-scale border-purple-100 hover:border-purple-300 transition-all duration-300">
+            <Card className="hover-scale border-purple-100 hover:border-purple-300 transition-all duration-300 overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
+                <img
+                  src="/img/cc0714ae-7ee7-44c3-84ee-d4b46a5b67bc.jpg"
+                  alt="Анализ конкурентов"
+                  className="w-32 h-32 object-cover rounded-lg shadow-lg"
+                />
+              </div>
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Search" size={32} className="text-purple-600" />
-                </div>
                 <CardTitle className="text-xl font-bold text-gray-900">
                   Анализ конкурентов
                 </CardTitle>
